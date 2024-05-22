@@ -11,9 +11,6 @@ LABEL description="This container was tested with \
     -  K80 on AWS p2.xlarge  with nvidia drivers 470.141.03 and cuda v11.4 \
     -  Geforce RTX 2070 SUPER (local) with nvidia drivers 470.141.03 and cuda v11.4"
 
-LABEL author="Geert Vandeweyer"
-LABEL author.email="geert.vandeweyer@uza.be"
-
 ## needed apt packages
 ARG BUILD_PACKAGES="wget git bzip2"
 # needed conda packages 
@@ -58,7 +55,7 @@ ARG DATE_CACHE_BREAK=$(date)
 
 # my fork of spliceai : has gpu optimizations
 RUN cd /opt/ && \
-    git clone https://github.com/geertvandeweyer/SpliceAI.git && \
+    git clone https://github.com/henrycope/SpliceAI.git && \
     cd SpliceAI && \
     python setup.py install 
 
