@@ -182,7 +182,7 @@ def run_spliceai_batched(args, ann,devices,mem_per_logical):
 def run_spliceai(args, ann):
     # assign variables
     input_data = args.input_data
-    output_data = args_output_data
+    output_data = args.output_data
     distance = args.distance
     mask = args.mask
     
